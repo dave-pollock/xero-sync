@@ -1,0 +1,9 @@
+__pycache__/
+.env
+.pytest_cache
+.terraform
+.venv
+.zip
+providers.tf
+terraform/package
+xero_lambda.zip

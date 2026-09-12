@@ -1,0 +1,18 @@
+{
+  "cucumberautocomplete.steps": [
+      "tests/sync/*.py"
+  ],
+  "cucumberautocomplete.strictGherkinCompletion": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": [
+    "."
+  ],
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  }
+}

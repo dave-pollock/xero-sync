@@ -1,0 +1,22 @@
+{
+	"name": "Deployer",
+	"build": {
+		"dockerfile": "${localWorkspaceFolder}/Dockerfile"
+	},
+	"containerEnv": {
+		"VIRTUAL_ENV": "${containerWorkspaceFolder}/.venv"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"alexkrechik.cucumberautocomplete",
+				"charliermarsh.ruff",
+				"ms-python.debugpy",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.vscode-python-envs"
+			]
+		}
+	},
+	"postCreateCommand": "uv sync --all-extras --locked"
+}
