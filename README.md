@@ -3,9 +3,6 @@
 Syncs orders and transactions from Wix and Stripe to Xero.
 
 ## Running
-1. Set the following environment variables or put them in a `.env` file:
-   - `XERO_ACCOUNT_ID`: The ID of a Xero account where transactions will be synced to.
-   - `XERO_CONTACT_ID_STRIPE`: The UUID of a contact ID in Xero which will be associated with any Stripe fees.
 1. Authenticate with AWS:
    ```
    aws login --remote

@@ -179,7 +179,7 @@ def _xero_line_item_from_wix_shipping(wix_order: WixOrder) -> XeroLineItem:
     )
 
 
-if __name__ == "__main__":
+def init_and_sync() -> Result:
     logger = logging.getLogger("xero-sync")
     logger.info("Starting Xero Lambda function")
 
@@ -198,7 +198,7 @@ if __name__ == "__main__":
     logger.info("Initialising Stripe adapter")
     stripe = StripeAdapter(api_key=secret.stripe_api_token)
 
-    sync(
+    return sync(
         logger=logger,
         wix=wix,
         stripe=stripe,
@@ -206,3 +206,7 @@ if __name__ == "__main__":
         stripe_contact_id=secret.xero_contact_id_stripe,
         xero_account_id=secret.xero_account_id,
     )
+
+
+if __name__ == "__main__":
+    init_and_sync()
