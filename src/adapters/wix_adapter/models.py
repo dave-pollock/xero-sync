@@ -17,7 +17,9 @@ class WixOrderLineItem:
     def from_wix_order_line_item(cls, li: OrderLineItem) -> Self:
         return cls(
             amount=li.price_before_discounts.amount,
-            discount_amount=(li.price_before_discounts.amount - li.price.amount),
+            discount_amount=(
+                (li.price_before_discounts.amount - li.price.amount) * li.quantity
+            ),
             quantity=li.quantity,
             product_name=li.product_name.original,
             sku=li.physical_properties.sku,

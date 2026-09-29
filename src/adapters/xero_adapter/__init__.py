@@ -131,7 +131,7 @@ class XeroAdapter(XeroPort):
                 bank_transactions=[
                     BankTransaction(
                         type="SPEND",
-                        contact=XeroContact(contact_id=contact_id),
+                        contact=Contact(contact_id=contact_id),
                         date=date,
                         line_items=[
                             LineItem(
